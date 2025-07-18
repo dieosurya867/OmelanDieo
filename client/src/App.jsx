@@ -11,8 +11,24 @@ import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import LandingPage from "./pages/landingpage/LandingPage";
 import PublicLayout from "./layouts/PublicLayout";
+import DashboardLayout from "./layouts/DashboardLayout";
+import Tables from "./pages/dashboard/Tables";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  const preloader = document.getElementById("preloader");
+
+  if (preloader) {
+    setTimeout(() => {
+      preloader.style.display = "none";
+      setLoading(false);
+    }, 2000);
+  }
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1000);
+  }, []);
   return (
     <Routes>
       <Route element={<PublicLayout />}>
@@ -21,8 +37,9 @@ function App() {
         <Route path="register" element={<RegisterPage />} />
       </Route>
 
-      {/* <Route element={<DashboardLayout />}></Route> */}
-      <Route path="dashboard" element={<Page />} />
+      <Route path="/tables" element={<Tables />} />
+
+      {/* <Route path="dashboard" element={<Page />} /> */}
     </Routes>
   );
 }
