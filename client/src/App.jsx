@@ -12,6 +12,8 @@ import { RegisterPage } from "./pages/RegisterPage";
 import LandingPage from "./pages/landingpage/LandingPage";
 import PublicLayout from "./layouts/PublicLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
+import FormElements from "./pages/dashboard/Form/FormElements";
+import FormLayout from "./pages/dashboard/Form/FormLayout";
 import Tables from "./pages/dashboard/Tables";
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
       </Route>
 
       <Route path="/tables" element={<Tables />} />
+      <Route path="/forms/form-elements" element={<FormElements />} />
+      <Route path="/forms/form-layout" element={<FormLayout />} />
 
       {/* <Route path="dashboard" element={<Page />} /> */}
     </Routes>

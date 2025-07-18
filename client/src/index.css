@@ -14,10 +14,8 @@
     @apply bg-background text-foreground;
   }
 }
-
 /* jika ingin tetap pisah, import dashboard.css di sini */
-
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&: is(.dark *));
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
