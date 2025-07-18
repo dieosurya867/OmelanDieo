@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "../components/dashboard/Sidebar";
 import Header from "../components/dashboard/Header";
 
-const DefaultLayout = ({ children }) => {
+const DashboardLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -34,4 +34,4 @@ const DefaultLayout = ({ children }) => {
   );
 };
 
-export default DefaultLayout;
+export default DashboardLayout;
